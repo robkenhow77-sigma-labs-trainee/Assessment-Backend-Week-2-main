@@ -31,7 +31,7 @@ def format_experiments(experiments: list[dict], score_over:str ) -> list[dict]:
                 "species": experiment["species_name"],
                 "experiment_date": date_str,
                 "experiment_type": experiment["type_name"],
-                "score": f'{round(score_percentage, 2)}%'
+                "score": f'{(score_percentage/100):.2%}'
                     })
     return experiments_formatted
 
@@ -64,6 +64,8 @@ def get_experiments(type: str, score_over: int, conn) -> list[dict]:
         score_over = 0
     if not type:
         type = ''
+    else:
+        type = type.lower()
     
     cur = conn.cursor()
     cur.execute(f"""

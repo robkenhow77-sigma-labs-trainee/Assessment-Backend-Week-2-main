@@ -96,6 +96,7 @@ def experiment():
         experiment = insert_experiment(subject_id, score, experiment_type, experiment_date, conn)
         return experiment, 201
 
+
 @app.route("/experiment/<id>", methods=["DELETE"])
 def delete_experiment(id):
 
