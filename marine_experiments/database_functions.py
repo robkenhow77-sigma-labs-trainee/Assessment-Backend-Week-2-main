@@ -9,7 +9,7 @@ from datetime import datetime
 def format_subjects(subjects: list[dict]) -> list[dict]:
     subjects_formatted = []
     for subject in subjects:
-        date_str = subject["date_of_birth"].strftime("%Y-%M-%d")
+        date_str = subject["date_of_birth"].strftime("%Y-%m-%d")
         subjects_formatted.append({
             "subject_id": subject["subject_id"],
             "subject_name": subject["subject_name"],
@@ -24,14 +24,14 @@ def format_experiments(experiments: list[dict], score_over:str ) -> list[dict]:
     for experiment in experiments:
         score_percentage = float((experiment["score"] / experiment["max_score"]) * 100)
         if score_percentage > int(score_over):
-            date_str = experiment["experiment_date"].strftime("%Y-%M-%d")
+            date_str = experiment["experiment_date"].strftime("%Y-%m-%d")
             experiments_formatted.append({
                 "experiment_id": experiment["experiment_id"],
                 "subject_id": experiment["subject_id"],
                 "species": experiment["species_name"],
                 "experiment_date": date_str,
                 "experiment_type": experiment["type_name"],
-                "experiment_score": score_percentage
+                "score": f'{round(score_percentage, 2)}%'
                     })
     return experiments_formatted
 
@@ -92,7 +92,7 @@ def delete_experiment_by_id(id: int, conn) -> dict | None:
     experiment = cur.fetchall()
     if experiment:
         experiment = experiment[0]
-        correct_date = experiment["experiment_date"].strftime("%Y-%M-%d")
+        correct_date = experiment["experiment_date"].strftime("%Y-%m-%d")
         formatted_experiment = {
         "experiment_id": experiment["experiment_id"],
         "experiment_date": correct_date
@@ -126,7 +126,7 @@ def insert_experiment(subject_id, score, experiment_type, experiment_date, conn)
     experiment = cur.fetchall()
     if experiment:
         experiment = experiment[0]
-        correct_date = experiment["experiment_date"].strftime("%Y-%M-%d")
+        correct_date = experiment["experiment_date"].strftime("%Y-%m-%d")
         formatted_experiment = {
             "experiment_id": experiment["experiment_id"],
             "subject_id": experiment["subject_id"],
