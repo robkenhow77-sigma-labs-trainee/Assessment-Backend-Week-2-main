@@ -3,10 +3,10 @@ platform linux -- Python 3.12.7, pytest-8.3.3, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Backend-Week-2-main/Assessment-Backend-Week-2-main/marine_experiments
 collected 100 items
 
-test_api.py ...F.F..F..FFFFF..............FFFF...FFF.FF........FFFFFF.FF [ 60%]
+test_api.py ...............F.....................FFF..................FF [ 60%]
 FFFFFFFFFFFF...FFFFFFFFFFFFF..FF.......F                                 [100%]
 
-======================== 53 failed, 47 passed in 12.48s ========================
+======================== 34 failed, 66 passed in 12.16s ========================
 ************* Module api
 marine_experiments/api.py:8:0: C0301: Line too long (123/100) (line-too-long)
 marine_experiments/api.py:75:0: C0303: Trailing whitespace (trailing-whitespace)
