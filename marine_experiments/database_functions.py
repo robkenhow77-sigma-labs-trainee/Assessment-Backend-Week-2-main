@@ -47,7 +47,7 @@ def get_db_connection(dbname,
                    cursor_factory=RealDictCursor)
 
 
-def get_subjects(conn) -> list[dict]: 
+def get_subjects(conn) -> list[dict]:
     cur = conn.cursor()
     cur.execute("""
         SELECT * FROM subject
@@ -66,7 +66,6 @@ def get_experiments(type: str, score_over: int, conn) -> list[dict]:
         type = ''
     else:
         type = type.lower()
-    
     cur = conn.cursor()
     cur.execute(f"""
             SELECT experiment.experiment_id, experiment.subject_id, species.species_name, experiment.experiment_date, experiment_type.type_name, experiment.score, experiment_type.max_score
@@ -89,7 +88,7 @@ def delete_experiment_by_id(id: int, conn) -> dict | None:
         DELETE FROM experiment
         WHERE experiment_id = %s
         RETURNING experiment_id, experiment_date
-        ;""", 
+        ;""",
         [id])
     experiment = cur.fetchall()
     if experiment:
@@ -102,7 +101,6 @@ def delete_experiment_by_id(id: int, conn) -> dict | None:
         cur.close()
         conn.commit()
         return formatted_experiment
-    
     cur.close()
     conn.commit()
     return experiment
@@ -113,7 +111,7 @@ def insert_experiment(subject_id, score, experiment_type, experiment_date, conn)
         experiment_date = datetime.now().strftime("%Y-%m-%d")
     cur = conn.cursor()
     cur.execute( """
-        SELECT experiment_type_id 
+        SELECT experiment_type_id
         FROM experiment_type
         WHERE type_name = %s
                  """, [experiment_type.lower()])
@@ -123,7 +121,7 @@ def insert_experiment(subject_id, score, experiment_type, experiment_date, conn)
         VALUES (%s, %s, %s, %s)
         RETURNING *
         ;
-        """, 
+        """,
         [subject_id, experiment_type__id, experiment_date, score])
     experiment = cur.fetchall()
     if experiment:
@@ -139,6 +137,5 @@ def insert_experiment(subject_id, score, experiment_type, experiment_date, conn)
         cur.close()
         conn.commit()
         return formatted_experiment
-   
     cur.close()
     return experiment
