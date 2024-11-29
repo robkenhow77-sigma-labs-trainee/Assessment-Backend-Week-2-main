@@ -3,18 +3,18 @@ platform linux -- Python 3.12.7, pytest-8.3.3, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Backend-Week-2-main/Assessment-Backend-Week-2-main/marine_experiments
 collected 100 items
 
-test_api.py ...............F.....................FFF..................FF [ 60%]
+test_api.py ..........................................................FF [ 60%]
 FFFFFFFFFFFF...FFFFFFFFFFFFF..FF.......F                                 [100%]
 
-======================== 34 failed, 66 passed in 12.16s ========================
+======================== 30 failed, 70 passed in 12.92s ========================
 ************* Module api
 marine_experiments/api.py:8:0: C0301: Line too long (123/100) (line-too-long)
 marine_experiments/api.py:75:0: C0303: Trailing whitespace (trailing-whitespace)
 marine_experiments/api.py:81:0: C0303: Trailing whitespace (trailing-whitespace)
 marine_experiments/api.py:88:0: C0303: Trailing whitespace (trailing-whitespace)
 marine_experiments/api.py:95:0: C0303: Trailing whitespace (trailing-whitespace)
-marine_experiments/api.py:108:0: C0303: Trailing whitespace (trailing-whitespace)
-marine_experiments/api.py:111:0: C0303: Trailing whitespace (trailing-whitespace)
+marine_experiments/api.py:109:0: C0303: Trailing whitespace (trailing-whitespace)
+marine_experiments/api.py:112:0: C0303: Trailing whitespace (trailing-whitespace)
 marine_experiments/api.py:23:0: C0116: Missing function or method docstring (missing-function-docstring)
 marine_experiments/api.py:23:16: W0622: Redefining built-in 'type' (redefined-builtin)
 marine_experiments/api.py:29:0: C0116: Missing function or method docstring (missing-function-docstring)
@@ -26,28 +26,28 @@ marine_experiments/api.py:71:8: W0622: Redefining built-in 'type' (redefined-bui
 marine_experiments/api.py:96:8: W0621: Redefining name 'experiment' from outer scope (line 68) (redefined-outer-name)
 marine_experiments/api.py:68:0: R0911: Too many return statements (7/6) (too-many-return-statements)
 marine_experiments/api.py:68:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-marine_experiments/api.py:100:0: C0116: Missing function or method docstring (missing-function-docstring)
-marine_experiments/api.py:100:22: W0622: Redefining built-in 'id' (redefined-builtin)
-marine_experiments/api.py:105:4: W0621: Redefining name 'experiment' from outer scope (line 68) (redefined-outer-name)
+marine_experiments/api.py:101:0: C0116: Missing function or method docstring (missing-function-docstring)
+marine_experiments/api.py:101:22: W0622: Redefining built-in 'id' (redefined-builtin)
+marine_experiments/api.py:106:4: W0621: Redefining name 'experiment' from outer scope (line 68) (redefined-outer-name)
 marine_experiments/api.py:3:0: W0611: Unused datetime imported from datetime (unused-import)
 marine_experiments/api.py:6:0: W0611: Unused sql imported from psycopg2 (unused-import)
 ************* Module database_functions
 marine_experiments/database_functions.py:50:37: C0303: Trailing whitespace (trailing-whitespace)
-marine_experiments/database_functions.py:67:0: C0303: Trailing whitespace (trailing-whitespace)
-marine_experiments/database_functions.py:90:13: C0303: Trailing whitespace (trailing-whitespace)
-marine_experiments/database_functions.py:103:0: C0303: Trailing whitespace (trailing-whitespace)
-marine_experiments/database_functions.py:124:12: C0303: Trailing whitespace (trailing-whitespace)
-marine_experiments/database_functions.py:140:0: C0303: Trailing whitespace (trailing-whitespace)
+marine_experiments/database_functions.py:69:0: C0303: Trailing whitespace (trailing-whitespace)
+marine_experiments/database_functions.py:92:13: C0303: Trailing whitespace (trailing-whitespace)
+marine_experiments/database_functions.py:105:0: C0303: Trailing whitespace (trailing-whitespace)
+marine_experiments/database_functions.py:126:12: C0303: Trailing whitespace (trailing-whitespace)
+marine_experiments/database_functions.py:142:0: C0303: Trailing whitespace (trailing-whitespace)
 marine_experiments/database_functions.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)
 marine_experiments/database_functions.py:22:0: C0116: Missing function or method docstring (missing-function-docstring)
 marine_experiments/database_functions.py:50:0: C0116: Missing function or method docstring (missing-function-docstring)
 marine_experiments/database_functions.py:62:0: C0116: Missing function or method docstring (missing-function-docstring)
 marine_experiments/database_functions.py:62:20: W0622: Redefining built-in 'type' (redefined-builtin)
-marine_experiments/database_functions.py:84:0: C0116: Missing function or method docstring (missing-function-docstring)
-marine_experiments/database_functions.py:84:28: W0622: Redefining built-in 'id' (redefined-builtin)
-marine_experiments/database_functions.py:109:0: C0116: Missing function or method docstring (missing-function-docstring)
+marine_experiments/database_functions.py:86:0: C0116: Missing function or method docstring (missing-function-docstring)
+marine_experiments/database_functions.py:86:28: W0622: Redefining built-in 'id' (redefined-builtin)
+marine_experiments/database_functions.py:111:0: C0116: Missing function or method docstring (missing-function-docstring)
 marine_experiments/database_functions.py:6:0: C0411: standard import "datetime.datetime" should be placed before third party imports "psycopg2.connect", "psycopg2.extras.RealDictCursor", "psycopg2.extensions.connection" (wrong-import-order)
 
 ------------------------------------------------------------------
-Your code has been rated at 7.19/10 (previous run: 7.19/10, +0.00)
+Your code has been rated at 7.21/10 (previous run: 7.21/10, +0.00)
 
